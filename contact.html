@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | WoodCraft Masters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hammer"></i>
+                    WoodCraft<span>Masters</span>
+                </a>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
+                    <li><a href="products.html"><i class="fas fa-couch"></i> Products</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="contact.html" class="active"><i class="fas fa-phone"></i> Contact</a></li>
+                    <li><a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We're here to help with all your carpentry needs</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2><i class="fas fa-map-marker-alt"></i> Visit Our Workshop</h2>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-pin"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Address</h3>
+                            <p>WoodCraft Masters Workshop<br>
+                            123 Carpenter Street,<br>
+                            Woodville Industrial Area,<br>
+                            Mumbai - 400001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Phone Numbers</h3>
+                            <p><strong>Sales:</strong> +91 98765 43210</p>
+                            <p><strong>Workshop:</strong> +91 98765 43211</p>
+                            <p><strong>Support:</strong> +91 98765 43212</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email Address</h3>
+                            <p><strong>General:</strong> info@woodcraftmasters.com</p>
+                            <p><strong>Sales:</strong> sales@woodcraftmasters.com</p>
+                            <p><strong>Support:</strong> support@woodcraftmasters.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Working Hours</h3>
+                            <p><strong>Monday - Saturday:</strong> 9:00 AM - 7:00 PM</p>
+                            <p><strong>Sunday:</strong> 10:00 AM - 2:00 PM</p>
+                            <p><strong>Holidays:</strong> Closed on National Holidays</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Contact Buttons -->
+                    <div class="quick-buttons">
+                        <a href="tel:+919876543210" class="btn btn-primary btn-block">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        
+                        <a href="https://wa.me/919876543210" class="btn btn-success btn-block" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        
+                        <a href="mailto:info@woodcraftmasters.com" class="btn btn-outline btn-block">
+                            <i class="fas fa-envelope"></i> Send Email
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form & Map -->
+                <div class="contact-form-section">
+                    <!-- Map -->
+                    <div class="map-container">
+                        <h3><i class="fas fa-map-marked-alt"></i> Our Location</h3>
+                        <div class="map-placeholder">
+                            <!-- In real website, add Google Maps iframe here -->
+                            <div class="map-fallback">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Google Maps Location</p>
+                                <p class="small">Location: 123 Carpenter Street, Woodville, Mumbai</p>
+                                <button class="btn btn-small" id="openMap">
+                                    <i class="fas fa-external-link-alt"></i> Open in Google Maps
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="form-container">
+                        <h3><i class="fas fa-comments"></i> Send us a Message</h3>
+                        
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName">Full Name *</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactPhone">Mobile Number *</label>
+                                    <input type="tel" id="contactPhone" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address</label>
+                                    <input type="email" id="contactEmail">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactSubject">Subject *</label>
+                                <select id="contactSubject" required>
+                                    <option value="">Select Inquiry Type</option>
+                                    <option value="product">Product Inquiry</option>
+                                    <option value="service">Service Request</option>
+                                    <option value="quote">Get Quote</option>
+                                    <option value="custom">Custom Work</option>
+                                    <option value="repair">Repair Service</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage">Your Message *</label>
+                                <textarea id="contactMessage" rows="4" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> What is your delivery time?</h3>
+                    <p>Standard products: 7-15 days. Custom work: 15-30 days depending on complexity.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do you offer installation services?</h3>
+                    <p>Yes, we provide professional installation for all our products within Mumbai.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> What is your warranty policy?</h3>
+                    <p>We offer 5 years warranty on furniture and 3 years on doors & windows.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Can I visit your workshop?</h3>
+                    <p>Yes, you can visit our workshop by appointment. Please call to schedule.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Do you accept custom designs?</h3>
+                    <p>Absolutely! We specialize in custom furniture as per your requirements.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> What areas do you serve?</h3>
+                    <p>We serve all Mumbai areas and surrounding regions up to 50km radius.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need Immediate Assistance?</h2>
+            <p>Call us now for quick support</p>
+            <a href="tel:+919876543210" class="btn btn-primary btn-large">
+                <i class="fas fa-phone-alt"></i> Call: +91 98765 43210
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-hammer"></i> WoodCraft Masters</h3>
+                    <p>Your trusted partner for quality carpentry since 1998.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Emergency Contact</h3>
+                    <p>Available 24/7 for urgent repair services</p>
+                    <p><i class="fas fa-phone"></i> Emergency: +91 98765 43299</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 WoodCraft Masters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Contact form submission
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    name: document.getElementById('contactName').value,
+                    phone: document.getElementById('contactPhone').value,
+                    email: document.getElementById('contactEmail').value,
+                    subject: document.getElementById('contactSubject').value,
+                    message: document.getElementById('contactMessage').value,
+                    timestamp: new Date().toISOString()
+                };
+                
+                // Save to localStorage
+                const inquiries = JSON.parse(localStorage.getItem('inquiries')) || [];
+                inquiries.push(formData);
+                localStorage.setItem('inquiries', JSON.stringify(inquiries));
+                
+                // Show success message
+                alert('Thank you for your message! We will contact you within 24 hours.');
+                
+                // Reset form
+                this.reset();
+            });
+            
+            // Open map link
+            document.getElementById('openMap').addEventListener('click', function() {
+                window.open('https://www.google.com/maps?q=123+Carpenter+Street+Mumbai', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

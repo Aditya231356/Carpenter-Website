@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - WoodCraft Carpentry</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Wood<span>Craft</span></a>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cartCount">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="checkout-hero">
+        <div class="container">
+            <h1>Checkout</h1>
+        </div>
+    </section>
+
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-container">
+                <div class="checkout-form">
+                    <h2>Delivery Details</h2>
+                    <form id="checkoutForm">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mobile"><i class="fas fa-phone"></i> Mobile Number</label>
+                            <input type="tel" id="mobile" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address"><i class="fas fa-map-marker-alt"></i> Delivery Address</label>
+                            <textarea id="address" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="city"><i class="fas fa-city"></i> City</label>
+                            <input type="text" id="city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="pincode"><i class="fas fa-map-pin"></i> Pincode</label>
+                            <input type="text" id="pincode" required>
+                        </div>
+                        
+                        <h2>Payment Method</h2>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <div class="payment-content">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <div>
+                                        <h4>Cash on Delivery</h4>
+                                        <p>Pay when you receive the product</p>
+                                    </div>
+                                </div>
+                            </label>
+                            
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="upi">
+                                <div class="payment-content">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <div>
+                                        <h4>UPI Payment</h4>
+                                        <p>Pay using UPI apps</p>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div id="orderSummary">
+                                <!-- Order details loaded by JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn checkout-btn">Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">© 2024 WoodCraft Carpentry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Load cart items for summary
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const orderSummary = document.getElementById('orderSummary');
+            let total = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                orderSummary.innerHTML += `
+                    <div class="order-item">
+                        <span>${item.name} x${item.quantity}</span>
+                        <span>₹${itemTotal}</span>
+                    </div>
+                `;
+            });
+            
+            orderSummary.innerHTML += `
+                <div class="order-item">
+                    <span>Delivery Charges</span>
+                    <span>₹200</span>
+                </div>
+                <div class="order-item total">
+                    <span>Total Amount</span>
+                    <span>₹${total + 200}</span>
+                </div>
+            `;
+            
+            // Handle form submission
+            document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const orderData = {
+                    customer: {
+                        name: document.getElementById('name').value,
+                        mobile: document.getElementById('mobile').value,
+                        address: document.getElementById('address').value,
+                        city: document.getElementById('city').value,
+                        pincode: document.getElementById('pincode').value
+                    },
+                    payment: document.querySelector('input[name="payment"]:checked').value,
+                    items: cart,
+                    total: total + 200,
+                    date: new Date().toLocaleString()
+                };
+                
+                // Save order
+                const orders = JSON.parse(localStorage.getItem('orders')) || [];
+                orders.push(orderData);
+                localStorage.setItem('orders', JSON.stringify(orders));
+                
+                // Clear cart
+                localStorage.removeItem('cart');
+                
+                // Show success message
+                alert('Order placed successfully! Order ID: ORD' + Date.now());
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

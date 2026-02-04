@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | WoodCraft Masters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hammer"></i>
+                    WoodCraft<span>Masters</span>
+                </a>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
+                    <li><a href="products.html" class="active"><i class="fas fa-couch"></i> Products</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                    <li><a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Furniture Collection</h1>
+            <p>Handcrafted with premium wood and expert craftsmanship</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-page">
+        <div class="container">
+            <!-- Products Filter -->
+            <div class="products-filter">
+                <div class="filter-group">
+                    <input type="text" id="searchProducts" placeholder="Search products..." class="search-input">
+                </div>
+                
+                <div class="filter-group">
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="all">All Categories</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="doors">Doors & Windows</option>
+                        <option value="custom">Custom Work</option>
+                        <option value="office">Office Furniture</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <select id="priceFilter" class="filter-select">
+                        <option value="all">All Prices</option>
+                        <option value="0-10000">Under ₹10,000</option>
+                        <option value="10000-30000">₹10,000 - ₹30,000</option>
+                        <option value="30000-50000">₹30,000 - ₹50,000</option>
+                        <option value="50000+">Above ₹50,000</option>
+                    </select>
+                </div>
+                
+                <button id="resetFilters" class="btn btn-outline">
+                    <i class="fas fa-redo"></i> Reset Filters
+                </button>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="products-container" id="productsContainer">
+                <!-- Products loaded by JavaScript -->
+            </div>
+            
+            <!-- No Products Message -->
+            <div id="noProductsMessage" class="no-products" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>No Products Found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wood Types Info -->
+    <section class="wood-types">
+        <div class="container">
+            <h2 class="section-title">Premium Wood Types We Use</h2>
+            
+            <div class="wood-grid">
+                <div class="wood-card">
+                    <div class="wood-image">
+                        <img src="https://images.unsplash.com/photo-1590736969953-0126f7e1e0b9?w=300&h=200&fit=crop" alt="Teak Wood">
+                    </div>
+                    <h3>Teak Wood</h3>
+                    <p>Premium quality, highly durable, weather-resistant. Perfect for outdoor and premium furniture.</p>
+                </div>
+                
+                <div class="wood-card">
+                    <div class="wood-image">
+                        <img src="https://images.unsplash.com/photo-1577223625818-75bc1f2ac0e5?w=300&h=200&fit=crop" alt="Sheesham Wood">
+                    </div>
+                    <h3>Sheesham Wood</h3>
+                    <p>Beautiful grain patterns, strong and durable. Ideal for traditional furniture.</p>
+                </div>
+                
+                <div class="wood-card">
+                    <div class="wood-image">
+                        <img src="https://images.unsplash.com/photo-1533725920959-5f3f8f4644d2?w=300&h=200&fit=crop" alt="Oak Wood">
+                    </div>
+                    <h3>Oak Wood</h3>
+                    <p>Classic European wood, very strong with distinctive grain. Great for modern furniture.</p>
+                </div>
+                
+                <div class="wood-card">
+                    <div class="wood-image">
+                        <img src="https://images.unsplash.com/photo-1560749009-5f9c6d77d73b?w=300&h=200&fit=crop" alt="Engineered Wood">
+                    </div>
+                    <h3>Engineered Wood</h3>
+                    <p>Cost-effective, stable, and eco-friendly. Perfect for modern designs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Looking for Custom Furniture?</h2>
+            <p>We can create furniture exactly as per your requirements</p>
+            <a href="contact.html" class="btn btn-primary btn-large"><i class="fas fa-pencil-ruler"></i> Request Custom Design</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-hammer"></i> WoodCraft Masters</h3>
+                    <p>Premium quality wooden furniture since 1998.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Product Categories</h3>
+                    <p>Bedroom • Living Room • Dining • Office • Custom</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 WoodCraft Masters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>

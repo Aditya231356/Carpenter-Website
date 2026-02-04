@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoodCraft Masters | Premium Carpentry Solutions</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-hammer"></i>
+                    WoodCraft<span>Masters</span>
+                </a>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                    <li><a href="services.html"><i class="fas fa-tools"></i> Services</a></li>
+                    <li><a href="products.html"><i class="fas fa-couch"></i> Products</a></li>
+                    <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                    <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
+                    <li><a href="cart.html" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Crafting Timeless Wooden Masterpieces</h1>
+                <p class="hero-subtitle">25+ Years of Excellence in Custom Carpentry & Furniture</p>
+                <p class="hero-description">We transform your vision into beautifully crafted wooden furniture that lasts for generations. Quality, precision, and customer satisfaction define our work.</p>
+                <div class="hero-buttons">
+                    <a href="products.html" class="btn btn-primary"><i class="fas fa-eye"></i> View Products</a>
+                    <a href="contact.html" class="btn btn-secondary"><i class="fas fa-phone"></i> Get Quote</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=600&fit=crop" alt="Carpenter Workshop">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview">
+        <div class="container">
+            <h2 class="section-title">Our Expert Services</h2>
+            <p class="section-subtitle">Comprehensive carpentry solutions for homes and offices</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Custom Furniture</h3>
+                    <p>Beds, sofas, tables, and cabinets tailored to your space and style.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-door-closed"></i>
+                    </div>
+                    <h3>Doors & Windows</h3>
+                    <p>Wooden doors, windows, and frames with precision fitting.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Repair & Restoration</h3>
+                    <p>Professional repair and restoration of wooden furniture.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <h3>Custom Design</h3>
+                    <p>Bring your unique furniture ideas to life with our expert design.</p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="services.html" class="btn btn-outline"><i class="fas fa-arrow-right"></i> All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <p class="section-subtitle">Handcrafted with premium quality wood</p>
+            
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products loaded by JavaScript -->
+            </div>
+            
+            <div class="text-center">
+                <a href="products.html" class="btn btn-primary"><i class="fas fa-store"></i> View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <p class="section-subtitle">What our customers say about our work</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"WoodCraft Masters created beautiful custom cabinets for our kitchen. The quality and attention to detail exceeded our expectations!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Rajesh Kumar</h4>
+                        <p>Home Owner</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Professional service from start to finish. Our office furniture was delivered on time and perfectly matched our requirements."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Priya Sharma</h4>
+                        <p>Office Manager</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"They restored our antique wooden door beautifully. The craftsmanship is exceptional and the pricing is very reasonable."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Amit Patel</h4>
+                        <p>Hotel Owner</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3><i class="fas fa-hammer"></i> WoodCraft Masters</h3>
+                    <p>Creating beautiful, durable wooden furniture since 1998. Quality craftsmanship guaranteed.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Custom Furniture</a></li>
+                        <li><a href="#">Door Installation</a></li>
+                        <li><a href="#">Wood Repair</a></li>
+                        <li><a href="#">Cabinet Making</a></li>
+                        <li><a href="#">Office Furniture</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Carpenter Street, Woodville</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-envelope"></i> info@woodcraftmasters.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Sat: 9AM - 7PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 WoodCraft Masters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Load featured products
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Load 4 featured products
+            const products = JSON.parse(localStorage.getItem('products')) || getDefaultProducts();
+            const featuredContainer = document.getElementById('featuredProducts');
+            const featuredProducts = products.slice(0, 4);
+            
+            featuredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p class="product-description">${product.description.substring(0, 60)}...</p>
+                        <p class="product-quality"><strong>Material:</strong> ${product.quality}</p>
+                        <div class="product-footer">
+                            <span class="product-price">₹${product.price.toLocaleString()}</span>
+                            <button class="btn btn-small add-to-cart" data-id="${product.id}">
+                                <i class="fas fa-cart-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                `;
+                featuredContainer.appendChild(productCard);
+            });
+            
+            // Add event listeners to Add to Cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    const product = products.find(p => p.id === productId);
+                    if (product) {
+                        addToCart(product);
+                        updateCartCount();
+                        showNotification('Product added to cart!');
+                    }
+                });
+            });
+        });
+        
+        function getDefaultProducts() {
+            return [
+                {
+                    id: 1,
+                    name: "Teak Wood King Bed",
+                    description: "Premium solid teak wood bed with storage and carved headboard",
+                    category: "furniture",
+                    quality: "Solid Teak Wood",
+                    price: 42500,
+                    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 2,
+                    name: "Sheesham Dining Set",
+                    description: "6-seater dining table with matching chairs, traditional design",
+                    category: "furniture",
+                    quality: "Sheesham Wood",
+                    price: 38500,
+                    image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 3,
+                    name: "Custom Wardrobe",
+                    description: "Wall-to-wall wardrobe with mirror and multiple compartments",
+                    category: "furniture",
+                    quality: "Engineered Wood",
+                    price: 32500,
+                    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 4,
+                    name: "Wooden Main Door",
+                    description: "Carved wooden main door with security features and polish finish",
+                    category: "doors",
+                    quality: "Sal Wood",
+                    price: 28500,
+                    image: "https://images.unsplash.com/photo-1600585154340-043cd4475cdc?w=400&h=300&fit=crop"
+                }
+            ];
+        }
+        
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle"></i>
+                <span>${message}</span>
+            `;
+            
+            // Add to body
+            document.body.appendChild(notification);
+            
+            // Show notification
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
